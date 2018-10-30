@@ -13,19 +13,24 @@
  *    \switches  _ONE_NAMESPACE_PER_DRIVER_
  *               _LL_DRV_
  */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z51_drv.h,v $
- * Revision 2.2  2017/04/28 11:33:16  DPfeuffer
- * R: MDIS5 driver required
- * M: driver ported to MDIS5
- *
- * Revision 2.1  2004/11/29 09:03:08  ub
- * Initial Revision
- *
+ /*
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany
  ****************************************************************************/
+/*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 #ifndef _Z51_DRV_H
 #define _Z51_DRV_H

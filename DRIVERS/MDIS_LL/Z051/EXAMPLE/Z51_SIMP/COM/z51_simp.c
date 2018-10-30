@@ -18,31 +18,24 @@
  *     Required: libraries: mdis_api, usr_oss
  *     \switches (none)
  */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z51_simp.c,v $
- * Revision 1.5  2017/04/28 11:33:13  DPfeuffer
- * R:1. MDIS5 driver required
- *   2. F405 verification requires additional functionality
- * M:1. driver ported to MDIS5
- *   2.a) optional parameters delay/step/time added
- *     b) return exit code 1 if error
- *
- * Revision 1.4  2005/11/17 15:54:00  ub
- * added: wait for key before finishing
- *
- * Revision 1.3  2005/04/12 11:32:43  ub
- * cosmetics
- *
- * Revision 1.2  2005/01/19 15:15:13  ub
- * added message when signal arrives
- *
- * Revision 1.1  2004/11/29 09:03:06  ub
- * Initial Revision
- *
+ /*
  *---------------------------------------------------------------------------
  * (c) Copyright 2003 by MEN mikro elektronik GmbH, Nuernberg, Germany
  ****************************************************************************/
+/*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 static const char RCSid[]="$Id: z51_simp.c,v 1.5 2017/04/28 11:33:13 DPfeuffer Exp $";
 

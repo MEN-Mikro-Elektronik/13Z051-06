@@ -12,22 +12,24 @@
  *
  *     \switches -
  */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z51_doc.c,v $
- * Revision 1.3  2017/04/28 11:33:00  DPfeuffer
- * R: MDIS5 driver required
- * M: driver ported to MDIS5
- *
- * Revision 1.2  2005/04/12 11:32:37  ub
- * - changed default values for calibration
- *
- * Revision 1.1  2004/11/29 09:02:58  ub
- * Initial Revision
- *
+ /*
  *---------------------------------------------------------------------------
  * (c) Copyright 2004 by MEN Mikro Elektronik GmbH, Nuernberg, Germany
  ****************************************************************************/
+/*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
 
 /*! \mainpage
     This is the documentation of the MDIS5 low-level driver for the DAC8532

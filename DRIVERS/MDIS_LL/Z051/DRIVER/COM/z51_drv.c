@@ -13,31 +13,24 @@
  *
  *     \switches _ONE_NAMESPACE_PER_DRIVER_
  */
- /*-------------------------------[ History ]--------------------------------
- *
- * $Log: z51_drv.c,v $
- * Revision 1.4  2017/04/28 11:32:57  DPfeuffer
- * R:1. MDIS5 driver required
- *   2. Linux@F23P: Z51_Exit() sets only output B to zero because of two
- *      fast successively DAC_CTRL_REG writes
- *   3. Linux@F23P: Z51_Write() for ch #2 (output A+B) sets only output B
- *      because of two fast successively DAC_CTRL_REG writes
- * M:1. driver ported to MDIS5
- *   2+3. OSS_MikroDelay added between successively DAC_CTRL_REG writes
- *
- * Revision 1.3  2005/11/17 15:57:15  ub
- * write 0 to DACs before driver exit to avoid jumping output voltage to last set value on driver restart
- *
- * Revision 1.2  2005/04/12 11:32:35  ub
- * - fixed interrupt handling for F401 Rev.01
- * - new defaults for calibration values providing higher accuracy
- *
- * Revision 1.1  2004/11/29 09:02:57  ub
- * Initial Revision
- *
+ /*
  *---------------------------------------------------------------------------
  * (c) Copyright 2004 by MEN Mikro Elektronik GmbH, Nuernberg, Germany
  ****************************************************************************/
+/*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
 #define _NO_LL_HANDLE       /* ll_defs.h: don't define LL_HANDLE struct */
 
 #include <MEN/men_typs.h>   /* system dependent definitions   */

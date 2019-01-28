@@ -37,8 +37,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-static const char RCSid[]="$Id: z51_simp.c,v 1.5 2017/04/28 11:33:13 DPfeuffer Exp $";
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

@@ -6,14 +6,8 @@
 #
 #    Description: Makefile definitions for the Z51 driver (IO mapped)
 #
-#---------------------------------[ History ]---------------------------------
-#
-#   $Log: driver_io.mak,v $
-#   Revision 1.1  2017/04/28 11:33:02  DPfeuffer
-#   Initial Revision
-#
 #-----------------------------------------------------------------------------
-#   (c) Copyright 2016 by MEN mikro elektronik GmbH, Nuernberg, Germany
+#   Copyright (c) 2016-2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
 
 MAK_NAME=z51_io

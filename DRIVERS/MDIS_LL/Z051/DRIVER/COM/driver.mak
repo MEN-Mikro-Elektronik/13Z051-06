@@ -6,14 +6,8 @@
 #
 #    Description: Makefile definitions for the Z51 driver
 #
-#---------------------------------[ History ]---------------------------------
-#
-#   $Log: driver.mak,v $
-#   Revision 1.1  2004/11/29 09:02:59  ub
-#   Initial Revision
-#
 #-----------------------------------------------------------------------------
-#   (c) Copyright 2004 by MEN mikro elektronik GmbH, Nuernberg, Germany
+#   Copyright (c) 2004-2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
 
 MAK_NAME=z51

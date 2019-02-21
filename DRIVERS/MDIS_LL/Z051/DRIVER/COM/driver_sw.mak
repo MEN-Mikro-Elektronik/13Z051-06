@@ -6,14 +6,8 @@
 #
 #    Description: Makefile definitions for the Z51 driver (swapped variant)
 #
-#---------------------------------[ History ]---------------------------------
-#
-#   $Log: driver_sw.mak,v $
-#   Revision 1.1  2004/11/29 09:03:00  ub
-#   Initial Revision
-#
 #-----------------------------------------------------------------------------
-#   (c) Copyright 2004 by MEN mikro elektronik GmbH, Nuernberg, Germany
+#   Copyright (c) 2004-2019, MEN Mikro Elektronik GmbH
 #*****************************************************************************
 
 MAK_NAME=z51_sw

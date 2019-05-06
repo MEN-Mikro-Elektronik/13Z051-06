@@ -253,7 +253,7 @@
 Simple example for driver usage
 */
 
-/*! \page dummy
+/*! \page z51dummy MEN logo
   \menimages
 */
 

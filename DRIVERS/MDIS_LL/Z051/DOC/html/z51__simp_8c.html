@@ -11,7 +11,7 @@
 
 <div class="left_to_right" style="padding-top: 6px; background-color: #F0F0F0; height: 110px; border-bottom: 2px solid #D1D1D2;">
 	<!-- Titel -->
-	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;"></a>
+	<img src="menlogo.gif" alt="MEN" style="float: left; height: 103px; width: 155px; margin: 0px;">
 	<h1 style="margin: 0px; padding-top: 35px; padding-bottom: 0px;">Z51 MDIS5 Driver &nbsp; </h1>
 	<h3>z51_simp.c File Reference</h3>
 </div>
@@ -30,13 +30,12 @@
 <tr><td colspan=2><br><h2>Defines</h2></td></tr>
 <tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z51__simp_8c.html#a0">FAIL_UNLESS</a>(expression)</td></tr>
 <tr><td colspan=2><br><h2>Functions</h2></td></tr>
-<tr><td nowrap align=right valign=top>void __MAPILIB&nbsp;</td><td valign=bottom><a class="el" href="z51__simp_8c.html#a3">SignalHandler</a> (u_int32 sig)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Signal handler.</em> <a href="#a3"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int&nbsp;</td><td valign=bottom><a class="el" href="z51__simp_8c.html#a4">main</a> (int argc, char *argv[])</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Program main function.</em> <a href="#a4"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>void __MAPILIB&nbsp;</td><td valign=bottom><a class="el" href="z51__simp_8c.html#a2">SignalHandler</a> (u_int32 sig)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Signal handler.</em> <a href="#a2"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int&nbsp;</td><td valign=bottom><a class="el" href="z51__simp_8c.html#a3">main</a> (int argc, char *argv[])</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Program main function.</em> <a href="#a3"></a><em></em><br><br></td></tr>
 <tr><td colspan=2><br><h2>Variables</h2></td></tr>
-<tr><td nowrap align=right valign=top>const char&nbsp;</td><td valign=bottom><a class="el" href="z51__simp_8c.html#a1">RCSid</a> [] = "$Id: z51__simp_8c.html,v 1.5 2017/04/28 11:37:53 DPfeuffer Exp $"</td></tr>
-<tr><td nowrap align=right valign=top>int&nbsp;</td><td valign=bottom><a class="el" href="z51__simp_8c.html#a2">G_sigCount</a></td></tr>
+<tr><td nowrap align=right valign=top>int&nbsp;</td><td valign=bottom><a class="el" href="z51__simp_8c.html#a1">G_sigCount</a></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Simple example program for the Z51 driver.
@@ -75,7 +74,7 @@ Required: libraries: mdis_api, usr_oss <dl compact><dt><b>Preprocessor Switches:
 <b>Value:</b><div class="fragment"><pre><span class="keywordflow">if</span>( !(expression)) {\
      printf(<span class="stringliteral">"\n*** Error during: %s\nfile %s\nline %d\n"</span>, \
       #expression,__FILE__,__LINE__);\
-      printf(<span class="stringliteral">"%s\n"</span>,M_errstring(UOS_ErrnoGet()));\
+      printf(<span class="stringliteral">"%s\n"</span>,<a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/m__errstr_8c.html#a0">M_errstring</a>(UOS_ErrnoGet()));\
     ret = 1; \
      <span class="keywordflow">goto</span> ABORT;\
  }
@@ -83,7 +82,7 @@ Required: libraries: mdis_api, usr_oss <dl compact><dt><b>Preprocessor Switches:
   </tr>
 </table>
 <hr><h2>Function Documentation</h2>
-<a name="a4" doxytag="z51_simp.c::main"></a><p>
+<a name="a3" doxytag="z51_simp.c::main"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -130,7 +129,7 @@ Program main function.
     </td>
   </tr>
 </table>
-<a name="a3" doxytag="z51_simp.c::SignalHandler"></a><p>
+<a name="a2" doxytag="z51_simp.c::SignalHandler"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -167,35 +166,13 @@ Signal handler.
   </tr>
 </table>
 <hr><h2>Variable Documentation</h2>
-<a name="a2" doxytag="z51_simp.c::G_sigCount"></a><p>
+<a name="a1" doxytag="z51_simp.c::G_sigCount"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td class="md" nowrap valign="top"> int G_sigCount<code> [static]</code>
-      </table>
-    </td>
-  </tr>
-</table>
-<table cellspacing=5 cellpadding=0 border=0>
-  <tr>
-    <td>
-      &nbsp;
-    </td>
-    <td>
-
-<p>
-    </td>
-  </tr>
-</table>
-<a name="a1" doxytag="z51_simp.c::RCSid"></a><p>
-<table width="100%" cellpadding="2" cellspacing="0" border="0">
-  <tr>
-    <td class="md">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td class="md" nowrap valign="top"> const char RCSid[] = "$Id: z51__simp_8c.html,v 1.5 2017/04/28 11:37:53 DPfeuffer Exp $"<code> [static]</code>
       </table>
     </td>
   </tr>
@@ -219,7 +196,7 @@ Signal handler.
 <!-- Footer -->
 	<p class="footer">
 	Generated for Z51 MDIS5 Driver using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2017 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Copyright &copy; 2019 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
 	</p>
 </div>
 

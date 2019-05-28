@@ -135,7 +135,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="G_sigCount"><param name="Name" value="G_sigCount"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a2"><param name="Name" value="z51_simp.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a1"><param name="Name" value="z51_simp.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="gain"><param name="Name" value="gain"></OBJECT>
   <UL>
@@ -197,7 +197,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="main"><param name="Name" value="main"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a4"><param name="Name" value="z51_simp.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a3"><param name="Name" value="z51_simp.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="MDIS_PATH"><param name="Name" value="MDIS_PATH"></OBJECT>
   <UL>
@@ -223,13 +223,9 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structLL__HANDLE.html#m12"><param name="Name" value="LL_HANDLE"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="See Also" value="RCSid"><param name="Name" value="RCSid"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a1"><param name="Name" value="z51_simp.c"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="SignalHandler"><param name="Name" value="SignalHandler"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a3"><param name="Name" value="z51_simp.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a2"><param name="Name" value="z51_simp.c"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="U_INT32_OR_64"><param name="Name" value="U_INT32_OR_64"></OBJECT>
   <UL>
@@ -360,10 +356,9 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html"><param name="Name" value="z51_simp.c"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a0"><param name="Name" value="FAIL_UNLESS"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a2"><param name="Name" value="G_sigCount"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a4"><param name="Name" value="main"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a1"><param name="Name" value="RCSid"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a3"><param name="Name" value="SignalHandler"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a1"><param name="Name" value="G_sigCount"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a3"><param name="Name" value="main"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="z51__simp_8c.html#a2"><param name="Name" value="SignalHandler"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="See Also" value="Z51_VARIANT"><param name="Name" value="Z51_VARIANT"></OBJECT>
   <UL>

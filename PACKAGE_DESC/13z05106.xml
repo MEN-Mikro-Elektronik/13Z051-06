@@ -13,11 +13,11 @@
 			<description>DAC8532 interface unit in Chameleon FPGA</description>
 			<devnameprefix>DAC</devnameprefix>
 			<devtype>MDIS</devtype>
-            <autoid>
-                <chamunitid>0x27</chamunitid>
-                <chamv2id>51</chamv2id>
-            </autoid>
-            <busif>ChameleonBus</busif>
+			<autoid>
+				<chamunitid>0x27</chamunitid>
+				<chamv2id>51</chamv2id>
+			</autoid>
+			<busif>ChameleonBus</busif>
 			<swmodulelist>
 				<swmodule>
 					<name>z51</name>
@@ -34,11 +34,11 @@
 			<description>DAC8532 interface unit in Chameleon FPGA (io mapped)</description>
 			<devnameprefix>DAC</devnameprefix>
 			<devtype>MDIS</devtype>
-            <autoid>
-                <chamunitid>0x27</chamunitid>
-                <chamv2id>51</chamv2id>
-            </autoid>
-            <busif>ChameleonBus</busif>
+			<autoid>
+				<chamunitid>0x27</chamunitid>
+				<chamv2id>51</chamv2id>
+			</autoid>
+			<busif>ChameleonBus</busif>
 			<swmodulelist>
 				<swmodule>
 					<name>z51_io</name>
@@ -51,7 +51,7 @@
 	</modellist>
 	<settinglist>
 		<setting hidden="true">
-		    <name>IRQ_ENABLE</name>
+			<name>IRQ_ENABLE</name>
 			<description>enable irq after init</description>
 			<type>U_INT32</type>
 			<value>0</value>
@@ -81,7 +81,7 @@
 			<type>U_INT32</type>
 			<defaultvalue>0xcccd</defaultvalue>
 		</setting>
-    </settinglist>
+	</settinglist>
 	<!-- Global software modules -->
 	<swmodulelist>
 		<swmodule internal="false">

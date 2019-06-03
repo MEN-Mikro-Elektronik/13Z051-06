@@ -3,8 +3,6 @@
  *        \file  z51_drv.c
  *
  *      \author  ub/ls
- *        $Date: 2017/04/28 11:32:57 $
- *    $Revision: 1.4 $
  *
  *      \brief   Low-level driver for Z51 "Edmonton" DAC on F401 Rev.01
  *               Calibration done in software.
@@ -119,6 +117,8 @@ typedef struct {
 /* include files which need LL_HANDLE */
 #include <MEN/ll_entry.h>           /* low-level driver jump table  */
 #include <MEN/z51_drv.h>            /* Z51 driver header file */
+
+static const char IdentString[]=MENT_XSTR(MAK_REVISION);
 
 /*-----------------------------------------+
 |  PROTOTYPES                              |

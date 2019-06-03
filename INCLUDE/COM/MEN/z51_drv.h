@@ -3,8 +3,6 @@
  *        \file  z51_drv.h
  *
  *      \author  ub
- *        $Date: 2017/04/28 11:33:16 $
- *    $Revision: 2.2 $
  *
  *       \brief  Header file for Z51 driver containing
  *               Z51 specific status codes and

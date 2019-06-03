@@ -6,8 +6,6 @@
 /*!
  *         \file z51_simp.c
  *       \author ub
- *        $Date: 2017/04/28 11:33:13 $
- *    $Revision: 1.5 $
  *
  *       \brief  Simple example program for the Z51 driver
  *

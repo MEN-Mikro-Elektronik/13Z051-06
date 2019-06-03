@@ -3,8 +3,6 @@
  *        \file  z51_doc.c
  *
  *      \author  ub
- *        $Date: 2017/04/28 11:33:00 $
- *    $Revision: 1.3 $
  *
  *      \brief   User documentation for Z51 DAC "Edmonton" driver
  *

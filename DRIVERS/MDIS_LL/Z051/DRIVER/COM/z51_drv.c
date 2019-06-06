@@ -118,7 +118,11 @@ typedef struct {
 #include <MEN/ll_entry.h>           /* low-level driver jump table  */
 #include <MEN/z51_drv.h>            /* Z51 driver header file */
 
-static const char IdentString[]=MENT_XSTR(MAK_REVISION);
+#ifdef MAC_BYTESWAP
+    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,Z51 (swapped))
+#else
+    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,Z51 (non swapped))
+#endif
 
 /*-----------------------------------------+
 |  PROTOTYPES                              |
@@ -966,13 +970,7 @@ static int32 Z51_Info(
  */
 static char* Ident( void )
 {
-    return( "Z51 - Z51 low level driver: "
-#ifdef MAC_BYTESWAP
-    "swapped "
-#else
-    "non swapped "
-#endif
-"$Id: z51_drv.c,v 1.4 2017/04/28 11:32:57 DPfeuffer Exp $" );
+    return( (char*) IdentString );
 }
 
 /********************************* Cleanup *********************************/

@@ -119,9 +119,9 @@ typedef struct {
 #include <MEN/z51_drv.h>            /* Z51 driver header file */
 
 #ifdef MAC_BYTESWAP
-    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,Z51 (swapped))
+    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,Z51 (swapped));
 #else
-    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,Z51 (non swapped))
+    static const char IdentString[]=MENT_XSTR_SFX(MAK_REVISION,Z51 (non swapped));
 #endif
 
 /*-----------------------------------------+

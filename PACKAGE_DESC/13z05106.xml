@@ -2,8 +2,8 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="packagedesc.xsd">
 	<name>13z05106</name>
 	<description>MDIS5 driver package for digital analog converter DAC8532</description>
-	<date>2017-04-28</date>
-	<revision>Release-1.3</revision>
+	<date>2019-06-07</date>
+	<revision>13Z051-06_01_04-9-g7ed124a</revision>
 	<docroot>DRIVERS/MDIS_LL/Z051/DOC/html/index.html</docroot>
 	<!-- Models -->
 	<modellist>

@@ -190,86 +190,92 @@
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_Init</name>
-      <anchor>a26</anchor>
+      <anchor>a27</anchor>
       <arglist>(DESC_SPEC *descSpec, OSS_HANDLE *osHdl, MACCESS *ma, OSS_SEM_HANDLE *devSemHdl, OSS_IRQ_HANDLE *irqHdl, LL_HANDLE **llHdlP)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_Exit</name>
-      <anchor>a27</anchor>
+      <anchor>a28</anchor>
       <arglist>(LL_HANDLE **llHdlP)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_Read</name>
-      <anchor>a28</anchor>
+      <anchor>a29</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, int32 *value)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_Write</name>
-      <anchor>a29</anchor>
+      <anchor>a30</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, int32 value)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_SetStat</name>
-      <anchor>a30</anchor>
+      <anchor>a31</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, int32 code, INT32_OR_64 value32_or_64)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_GetStat</name>
-      <anchor>a31</anchor>
+      <anchor>a32</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, int32 code, INT32_OR_64 *value32_or_64P)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_BlockRead</name>
-      <anchor>a32</anchor>
+      <anchor>a33</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, void *buf, int32 size, int32 *nbrRdBytesP)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_BlockWrite</name>
-      <anchor>a33</anchor>
+      <anchor>a34</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 ch, void *buf, int32 size, int32 *nbrWrBytesP)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_Irq</name>
-      <anchor>a34</anchor>
+      <anchor>a35</anchor>
       <arglist>(LL_HANDLE *llHdl)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Z51_Info</name>
-      <anchor>a35</anchor>
+      <anchor>a36</anchor>
       <arglist>(int32 infoType,...)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>char *</type>
       <name>Ident</name>
-      <anchor>a36</anchor>
+      <anchor>a37</anchor>
       <arglist>(void)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>int32</type>
       <name>Cleanup</name>
-      <anchor>a37</anchor>
+      <anchor>a38</anchor>
       <arglist>(LL_HANDLE *llHdl, int32 retCode)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>u_int16</type>
       <name>calibrate</name>
-      <anchor>a38</anchor>
+      <anchor>a39</anchor>
       <arglist>(LL_HANDLE *llHdl, u_int16 value, int offset, int gain)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>__Z51_GetEntry</name>
-      <anchor>a39</anchor>
+      <anchor>a40</anchor>
       <arglist>(LL_ENTRY *drvP)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>const char</type>
+      <name>IdentString</name>
+      <anchor>a26</anchor>
+      <arglist>[]</arglist>
     </member>
   </compound>
   <compound kind="file">

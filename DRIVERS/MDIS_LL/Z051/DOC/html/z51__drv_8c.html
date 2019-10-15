@@ -64,41 +64,41 @@
 <tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a24">DAC_CMD_PD_100K</a>&nbsp;&nbsp;&nbsp;0x020000</td></tr>
 <tr><td nowrap align=right valign=top>#define&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a25">DAC_CMD_PD_HIGHZ</a>&nbsp;&nbsp;&nbsp;0x030000</td></tr>
 <tr><td colspan=2><br><h2>Functions</h2></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a26">Z51_Init</a> (DESC_SPEC *descSpec, OSS_HANDLE *osHdl, MACCESS *ma, OSS_SEM_HANDLE *devSemHdl, OSS_IRQ_HANDLE *irqHdl, <a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> **llHdlP)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Allocate and return low-level handle, initialize hardware.</em> <a href="#a26"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a27">Z51_Exit</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> **llHdlP)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">De-initialize hardware and clean up memory.</em> <a href="#a27"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a28">Z51_Read</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, int32 *value)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Read a value from the device.</em> <a href="#a28"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a29">Z51_Write</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, int32 value)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Description: Write a value to the device.</em> <a href="#a29"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a30">Z51_SetStat</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, int32 code, INT32_OR_64 value32_or_64)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Set the driver status.</em> <a href="#a30"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a31">Z51_GetStat</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, int32 code, INT32_OR_64 *value32_or_64P)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Get the driver status.</em> <a href="#a31"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a32">Z51_BlockRead</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, void *buf, int32 size, int32 *nbrRdBytesP)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Read a data block from the device.</em> <a href="#a32"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a33">Z51_BlockWrite</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, void *buf, int32 size, int32 *nbrWrBytesP)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Write a data block from the device.</em> <a href="#a33"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a34">Z51_Irq</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Interrupt service routine.</em> <a href="#a34"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a35">Z51_Info</a> (int32 infoType,...)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Get information about hardware and driver requirements.</em> <a href="#a35"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>char *&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a36">Ident</a> (void)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Return ident string.</em> <a href="#a36"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a37">Cleanup</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 retCode)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Close all handles, free memory and return error code.</em> <a href="#a37"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>u_int16&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a38">calibrate</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, u_int16 value, int offset, int gain)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Correct output value according to calibration values.</em> <a href="#a38"></a><em></em><br><br></td></tr>
-<tr><td nowrap align=right valign=top>void&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a39">__Z51_GetEntry</a> (LL_ENTRY *drvP)</td></tr>
-<tr><td>&nbsp;</td><td><em class="mdesc">Initialize driver's jump table.</em> <a href="#a39"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a27">Z51_Init</a> (DESC_SPEC *descSpec, OSS_HANDLE *osHdl, MACCESS *ma, OSS_SEM_HANDLE *devSemHdl, OSS_IRQ_HANDLE *irqHdl, <a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> **llHdlP)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Allocate and return low-level handle, initialize hardware.</em> <a href="#a27"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a28">Z51_Exit</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> **llHdlP)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">De-initialize hardware and clean up memory.</em> <a href="#a28"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a29">Z51_Read</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, int32 *value)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Read a value from the device.</em> <a href="#a29"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a30">Z51_Write</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, int32 value)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Description: Write a value to the device.</em> <a href="#a30"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a31">Z51_SetStat</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, int32 code, INT32_OR_64 value32_or_64)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Set the driver status.</em> <a href="#a31"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a32">Z51_GetStat</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, int32 code, INT32_OR_64 *value32_or_64P)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Get the driver status.</em> <a href="#a32"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a33">Z51_BlockRead</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, void *buf, int32 size, int32 *nbrRdBytesP)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Read a data block from the device.</em> <a href="#a33"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a34">Z51_BlockWrite</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 ch, void *buf, int32 size, int32 *nbrWrBytesP)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Write a data block from the device.</em> <a href="#a34"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a35">Z51_Irq</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Interrupt service routine.</em> <a href="#a35"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a36">Z51_Info</a> (int32 infoType,...)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Get information about hardware and driver requirements.</em> <a href="#a36"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>char *&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a37">Ident</a> (void)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Return ident string.</em> <a href="#a37"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>int32&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a38">Cleanup</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, int32 retCode)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Close all handles, free memory and return error code.</em> <a href="#a38"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>u_int16&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a39">calibrate</a> (<a class="el" href="structLL__HANDLE.html">LL_HANDLE</a> *llHdl, u_int16 value, int offset, int gain)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Correct output value according to calibration values.</em> <a href="#a39"></a><em></em><br><br></td></tr>
+<tr><td nowrap align=right valign=top>void&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a40">__Z51_GetEntry</a> (LL_ENTRY *drvP)</td></tr>
+<tr><td>&nbsp;</td><td><em class="mdesc">Initialize driver's jump table.</em> <a href="#a40"></a><em></em><br><br></td></tr>
+<tr><td colspan=2><br><h2>Variables</h2></td></tr>
+<tr><td nowrap align=right valign=top>const char&nbsp;</td><td valign=bottom><a class="el" href="z51__drv_8c.html#a26">IdentString</a> [] = MENT_XSTR_SFX(MAK_REVISION,Z51 (non swapped))</td></tr>
 </table>
 <hr><a name="_details"></a><h2>Detailed Description</h2>
 Low-level driver for Z51 "Edmonton" DAC on F401 Rev.01 Calibration done in software.
 <p>
-<dl compact><dt><b>Author:</b></dt><dd>ub/ls <dl compact><dt><b>Date</b></dt><dd>2017/04/28 11:32:57 </dd></dl>
-<dl compact><dt><b>Revision</b></dt><dd>1.4 </dd></dl>
-</dd></dl>
+<dl compact><dt><b>Author:</b></dt><dd>ub/ls</dd></dl>
 <p>
 Required: OSS, DESC, DBG, ID libraries<p>
 <dl compact><dt><b>Preprocessor Switches:</b></dt><dd>_ONE_NAMESPACE_PER_DRIVER_</dd></dl>
@@ -688,7 +688,7 @@ interrupt required
   </tr>
 </table>
 <hr><h2>Function Documentation</h2>
-<a name="a39" doxytag="z51_drv.c::__Z51_GetEntry"></a><p>
+<a name="a40" doxytag="z51_drv.c::__Z51_GetEntry"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -724,7 +724,7 @@ Initialize driver's jump table.
     </td>
   </tr>
 </table>
-<a name="a38" doxytag="z51_drv.c::calibrate"></a><p>
+<a name="a39" doxytag="z51_drv.c::calibrate"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -786,7 +786,7 @@ If gain is zero then no correction is done and the input value is returned uncha
     </td>
   </tr>
 </table>
-<a name="a37" doxytag="z51_drv.c::Cleanup"></a><p>
+<a name="a38" doxytag="z51_drv.c::Cleanup"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -834,7 +834,7 @@ Close all handles, free memory and return error code.
     </td>
   </tr>
 </table>
-<a name="a36" doxytag="z51_drv.c::Ident"></a><p>
+<a name="a37" doxytag="z51_drv.c::Ident"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -866,7 +866,7 @@ Return ident string.
     </td>
   </tr>
 </table>
-<a name="a32" doxytag="z51_drv.c::Z51_BlockRead"></a><p>
+<a name="a33" doxytag="z51_drv.c::Z51_BlockRead"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -934,7 +934,7 @@ Read a data block from the device.
     </td>
   </tr>
 </table>
-<a name="a33" doxytag="z51_drv.c::Z51_BlockWrite"></a><p>
+<a name="a34" doxytag="z51_drv.c::Z51_BlockWrite"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -1002,7 +1002,7 @@ Write a data block from the device.
     </td>
   </tr>
 </table>
-<a name="a27" doxytag="z51_drv.c::Z51_Exit"></a><p>
+<a name="a28" doxytag="z51_drv.c::Z51_Exit"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -1040,7 +1040,7 @@ The function deinitializes all channels by setting them to zero milivolts. The i
     </td>
   </tr>
 </table>
-<a name="a31" doxytag="z51_drv.c::Z51_GetStat"></a><p>
+<a name="a32" doxytag="z51_drv.c::Z51_GetStat"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -1103,7 +1103,7 @@ The driver supports <a class="el" href="z51__drv_8h.html#getstat_setstat_codes">
     </td>
   </tr>
 </table>
-<a name="a35" doxytag="z51_drv.c::Z51_Info"></a><p>
+<a name="a36" doxytag="z51_drv.c::Z51_Info"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -1164,7 +1164,7 @@ The LL_INFO_LOCKMODE code returns which process locking mode the driver needs (L
     </td>
   </tr>
 </table>
-<a name="a26" doxytag="z51_drv.c::Z51_Init"></a><p>
+<a name="a27" doxytag="z51_drv.c::Z51_Init"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -1247,7 +1247,7 @@ The following descriptor keys are used:<p>
     </td>
   </tr>
 </table>
-<a name="a34" doxytag="z51_drv.c::Z51_Irq"></a><p>
+<a name="a35" doxytag="z51_drv.c::Z51_Irq"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -1286,7 +1286,7 @@ If the driver can detect the interrupt's cause it returns LL_IRQ_DEVICE or LL_IR
     </td>
   </tr>
 </table>
-<a name="a28" doxytag="z51_drv.c::Z51_Read"></a><p>
+<a name="a29" doxytag="z51_drv.c::Z51_Read"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -1341,7 +1341,7 @@ Dummy function.<p>
     </td>
   </tr>
 </table>
-<a name="a30" doxytag="z51_drv.c::Z51_SetStat"></a><p>
+<a name="a31" doxytag="z51_drv.c::Z51_SetStat"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -1403,7 +1403,7 @@ The driver supports <a class="el" href="z51__drv_8h.html#getstat_setstat_codes">
     </td>
   </tr>
 </table>
-<a name="a29" doxytag="z51_drv.c::Z51_Write"></a><p>
+<a name="a30" doxytag="z51_drv.c::Z51_Write"></a><p>
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
   <tr>
     <td class="md">
@@ -1458,6 +1458,29 @@ The function writes a value to the current channel.<p>
     </td>
   </tr>
 </table>
+<hr><h2>Variable Documentation</h2>
+<a name="a26" doxytag="z51_drv.c::IdentString"></a><p>
+<table width="100%" cellpadding="2" cellspacing="0" border="0">
+  <tr>
+    <td class="md">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td class="md" nowrap valign="top"> const char IdentString[] = MENT_XSTR_SFX(MAK_REVISION,Z51 (non swapped))<code> [static]</code>
+      </table>
+    </td>
+  </tr>
+</table>
+<table cellspacing=5 cellpadding=0 border=0>
+  <tr>
+    <td>
+      &nbsp;
+    </td>
+    <td>
+
+<p>
+    </td>
+  </tr>
+</table>
 
 	</div>
 </div>
@@ -1465,8 +1488,7 @@ The function writes a value to the current channel.<p>
 <div class="footer">
 <!-- Footer -->
 	<p class="footer">
-	Generated for Z51 MDIS5 Driver using <a href="http://www.doxygen.org">doxygen</a>.<br>
-	Copyright &copy; 2019 <a href="http://www.men.de">MEN Mikro Elektronik GmbH</a>. All Rights Reserved.
+	Generated for Z51 MDIS5 Driver using <a href="http://www.doxygen.org">doxygen</a>. All Rights Reserved.
 	</p>
 </div>
 

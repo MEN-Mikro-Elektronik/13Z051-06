@@ -237,14 +237,6 @@
 
     \subsection z51_simp  Simple example for using the driver
     z51_simp.c (see example section)
-
-    \subsection z51_min   Minimum descriptor
-    z51_min.dsc
-    demonstrates the minimum set of options necessary for using the drver.
-
-    \subsection z51_max   Minimum descriptor
-    z51_max.dsc
-    shows all possible configuration options for this driver.
 */
 
 /** \example tmpl_simp.c

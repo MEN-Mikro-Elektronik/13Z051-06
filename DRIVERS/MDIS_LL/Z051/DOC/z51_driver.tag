@@ -5,7 +5,6 @@
     <title></title>
     <name>index</name>
     <docanchor>codes</docanchor>
-    <docanchor>z51_max</docanchor>
     <docanchor>Variants</docanchor>
     <docanchor>Documents</docanchor>
     <docanchor>watchdog</docanchor>
@@ -16,7 +15,6 @@
     <docanchor>calibration</docanchor>
     <docanchor>FuncDesc</docanchor>
     <docanchor>channels</docanchor>
-    <docanchor>z51_min</docanchor>
     <docanchor>z51_simp</docanchor>
     <docanchor>descriptor_entries</docanchor>
     <docanchor>powerdown</docanchor>

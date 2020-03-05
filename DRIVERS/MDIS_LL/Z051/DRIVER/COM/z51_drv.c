@@ -83,7 +83,8 @@
 #define DAC_CMD_LOAD_AB     0x300000    /* set outputs A and B */
 #define DAC_CMD_BUF_A       0x000000    /* write to buffer A */
 #define DAC_CMD_BUF_B       0x040000    /* write to buffer B */
-#define DAC_CMD_PD_1K       0x010000    /* powerdown with out impedance 1kOhm*/
+#define DAC_CMD_PD_NONE     0x000000    /* powerdown none (output active) */
+#define DAC_CMD_PD_1K       0x010000    /* powerdown with out impedance 1kOhm */
 #define DAC_CMD_PD_100K     0x020000    /* powerdown 100kOhm */
 #define DAC_CMD_PD_HIGHZ    0x030000    /* powerdown high impedance */
 
@@ -559,10 +560,10 @@ static int32 Z51_SetStat(
 
             /* select powerdown mode */
             switch( value ) {
-                case 1:  pdMode = DAC_CMD_PD_1K;
-                case 2:  pdMode = DAC_CMD_PD_100K;
-                case 3:  pdMode = DAC_CMD_PD_HIGHZ;
-                default: pdMode = 0;
+                case 1:  pdMode = DAC_CMD_PD_1K; break;
+                case 2:  pdMode = DAC_CMD_PD_100K; break;
+                case 3:  pdMode = DAC_CMD_PD_HIGHZ; break;
+                default: pdMode = DAC_CMD_PD_NONE;
             }
 
             /* dependant on channel turn off output A or B */
@@ -570,10 +571,12 @@ static int32 Z51_SetStat(
                 case 0:
                     MWRITE_D32( ma, DAC_CTRL_REG,
                                 DAC_CMD_LOAD_A | DAC_CMD_BUF_A | pdMode );
+                    break;
 
                 case 1:
                     MWRITE_D32( ma, DAC_CTRL_REG,
                                 DAC_CMD_LOAD_B | DAC_CMD_BUF_B | pdMode );
+                    break;
             }
 
             llHdl->powerdown[ch] = value;

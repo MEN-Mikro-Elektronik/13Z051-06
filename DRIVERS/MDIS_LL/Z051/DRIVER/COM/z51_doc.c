@@ -12,7 +12,7 @@
  */
  /*
  *---------------------------------------------------------------------------
- * Copyright 2004-2019, MEN Mikro Elektronik GmbH
+ * Copyright 2004-2020, MEN Mikro Elektronik GmbH
  ****************************************************************************/
 /*
 * This program is free software: you can redistribute it and/or modify
@@ -74,6 +74,8 @@
     - Channel 1: DAC channel B
     - Channel 2: DAC channels A and B
 
+    Note: M_setstat() and M_getstat() can only be used for channel 0 or 1.
+
     Using M_write() a 16-bit value can be written on channels 0 and 1 which
     determines the voltage/current on DAC channel A or B respectively.
     M_write() on channel 2 expects a 32-bit argument which is composed of the
@@ -119,15 +121,9 @@
 
     \n \subsection powerdown Power Down
 
-    The driver allows to set each of the DAC's channels into one of the three
+    The driver allows to set each of the DAC's channels into one of four
     supported power-down modes. This is done using SetStat Z51_POWERDOWN on
-    the respective logical channel. To set both physical channels
-    simultaneously to power-down, the logical channel 2 is used. In this case
-    the following syntax applies:
-
-    \code
-    M_setstat( path, Z51_POWERDOWN, ( ch_b_pd_mode << 16) | ch_a_pd_mode );
-    \endcode
+    the respective logical channel (0 or 1).
 
     \warning On Power Down the outputs of the DAC8532 are set High-Z or tied
     to ground. If this feature is useful or even applicable depends on the
@@ -140,7 +136,6 @@
     - 3: Output tied to ground by internal 100kOhm resistor
 
     The current power-down mode can be obtained using SetStat Z51_POWERDOWN.
-    This is implemented for channel 0 and 1 only.
 
 
     \n \subsection watchdog Watchdog

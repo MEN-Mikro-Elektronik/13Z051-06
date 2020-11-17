@@ -51,6 +51,7 @@ Logical channels</h3>
 The driver supports three logical channels:<ul>
 <li>Channel 0: DAC channel A</li><li>Channel 1: DAC channel B</li><li>Channel 2: DAC channels A and B</li></ul>
 <p>
+Note: <a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat()</a> and <a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a12">M_getstat()</a> can only be used for channel 0 or 1.<p>
 Using <a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write()</a> a 16-bit value can be written on channels 0 and 1 which determines the voltage/current on DAC channel A or B respectively. <a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write()</a> on channel 2 expects a 32-bit argument which is composed of the 16-bit values that will be written to channels A and B:<p>
 <div class="fragment"><pre>    <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write</a>( (ch_b_value &lt;&lt; 16) | ch_a_value );
 </pre></div><p>
@@ -73,15 +74,13 @@ In case of hardware malfunction the FPGA can generate an interrupt. The driver c
 <br>
  <h3><a name="powerdown"></a>
 Power Down</h3>
-The driver allows to set each of the DAC's channels into one of the three supported power-down modes. This is done using SetStat Z51_POWERDOWN on the respective logical channel. To set both physical channels simultaneously to power-down, the logical channel 2 is used. In this case the following syntax applies:<p>
-<div class="fragment"><pre>    <a class="codeRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat</a>( path, Z51_POWERDOWN, ( ch_b_pd_mode &lt;&lt; 16) | ch_a_pd_mode );
-</pre></div><p>
+The driver allows to set each of the DAC's channels into one of four supported power-down modes. This is done using SetStat Z51_POWERDOWN on the respective logical channel (0 or 1).<p>
 <dl compact><dt><b>Warning:</b></dt><dd>On Power Down the outputs of the DAC8532 are set High-Z or tied to ground. If this feature is useful or even applicable depends on the circuity at the DAC's output on your board. <b> Use with care !</b></dd></dl>
 <br>
  Power Down modes:<ul>
 <li>0: Output active</li><li>1: Output High-Z</li><li>2: Output tied to ground by internal 1kOhm resistor</li><li>3: Output tied to ground by internal 100kOhm resistor</li></ul>
 <p>
-The current power-down mode can be obtained using SetStat Z51_POWERDOWN. This is implemented for channel 0 and 1 only.<p>
+The current power-down mode can be obtained using SetStat Z51_POWERDOWN.<p>
 <br>
  <h3><a name="watchdog"></a>
 Watchdog</h3>
@@ -103,22 +102,22 @@ Supported API Functions</h2>
 <td><b>API function</b> </td><td><b>Functionality</b> </td><td><b>Corresponding low level function</b><p>
 </td></tr>
 <tr>
-<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a4">M_open()</a></td><td>Open device</td><td><a class="el" href="z51__drv_8c.html#a27">Z51_Init()</a><p>
+<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a4">M_open()</a></td><td>Open device</td><td><a class="el" href="z51__drv_8c.html#a28">Z51_Init()</a><p>
 </td></tr>
 <tr>
-<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a9">M_close()</a> </td><td>Close device  </td><td><a class="el" href="z51__drv_8c.html#a28">Z51_Exit()</a>) </td></tr>
+<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a9">M_close()</a> </td><td>Close device  </td><td><a class="el" href="z51__drv_8c.html#a29">Z51_Exit()</a>) </td></tr>
 <tr>
-<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a10">M_read()</a> </td><td>Read from device  </td><td><a class="el" href="z51__drv_8c.html#a29">Z51_Read()</a> </td></tr>
+<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a10">M_read()</a> </td><td>Read from device  </td><td><a class="el" href="z51__drv_8c.html#a30">Z51_Read()</a> </td></tr>
 <tr>
-<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write()</a> </td><td>Write to device  </td><td><a class="el" href="z51__drv_8c.html#a30">Z51_Write()</a> </td></tr>
+<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a11">M_write()</a> </td><td>Write to device  </td><td><a class="el" href="z51__drv_8c.html#a31">Z51_Write()</a> </td></tr>
 <tr>
-<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat()</a> </td><td>Set device parameter  </td><td><a class="el" href="z51__drv_8c.html#a31">Z51_SetStat()</a> </td></tr>
+<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a13">M_setstat()</a> </td><td>Set device parameter  </td><td><a class="el" href="z51__drv_8c.html#a32">Z51_SetStat()</a> </td></tr>
 <tr>
-<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a12">M_getstat()</a> </td><td>Get device parameter  </td><td><a class="el" href="z51__drv_8c.html#a32">Z51_GetStat()</a> </td></tr>
+<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a12">M_getstat()</a> </td><td>Get device parameter  </td><td><a class="el" href="z51__drv_8c.html#a33">Z51_GetStat()</a> </td></tr>
 <tr>
-<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a14">M_getblock()</a> </td><td>Block read from device  </td><td><a class="el" href="z51__drv_8c.html#a33">Z51_BlockRead()</a> </td></tr>
+<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a14">M_getblock()</a> </td><td>Block read from device  </td><td><a class="el" href="z51__drv_8c.html#a34">Z51_BlockRead()</a> </td></tr>
 <tr>
-<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a15">M_setblock()</a> </td><td>Block write from device  </td><td><a class="el" href="z51__drv_8c.html#a34">Z51_BlockWrite()</a> </td></tr>
+<td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/mdis__api_8c.html#a15">M_setblock()</a> </td><td>Block write from device  </td><td><a class="el" href="z51__drv_8c.html#a35">Z51_BlockWrite()</a> </td></tr>
 <tr>
 <td><a class="elRef" doxygen="mdis_api.tag:../../../../../LIBSRC/MDIS_API/DOC/html/" href="../../../../../LIBSRC/MDIS_API/DOC/html/m__errstr_8c.html#a1">M_errstringTs()</a> </td><td>Generate error message  </td><td>- </td></tr>
 </table>

@@ -112,6 +112,7 @@ typedef struct {
     u_int32         gain[2];        /**< gain parameter */
     u_int32         powerdown[2];   /**< powerdown mode */
     int             initDac;        /**< init data communication and IRQ */
+    int             hwInit;         /**< hardware initialized */
     OSS_SIG_HANDLE  *hwSig;         /**< signal for hardware malfunction */
 } LL_HANDLE;
 
@@ -302,6 +303,7 @@ static int32 Z51_Init(
 
     /* tell write routine to init DAC communication and IRQ */
     llHdl->initDac = 1;
+    llHdl->hwInit = 0;
     llHdl->powerdown[0] = llHdl->powerdown[1] = 0;
 
     DBGWRT_3((DBH, "Z51_Init: offset=%d,%d  gain=%d,%d\n", 
@@ -342,18 +344,19 @@ static int32 Z51_Exit(
     +------------------------------*/
 
     /* set DAC outputs to zero */
-    MWRITE_D32( ma, DAC_CTRL_REG,
-                DAC_CMD_BUF_A | 0 );
-	OSS_MikroDelay(OSH, 1);
-    MWRITE_D32( ma, DAC_CTRL_REG,
-                DAC_CMD_LOAD_AB | DAC_CMD_BUF_B | 0 );
-    OSS_Delay( OSH, 100 );
+    if (llHdl->hwInit) {
+        MWRITE_D32( ma, DAC_CTRL_REG,
+                    DAC_CMD_LOAD_AB | DAC_CMD_BUF_B | 0 );
+        OSS_Delay( OSH, 100 );
 
-    /* disable interrupt */
-    MWRITE_D32( ma, DAC_IER_REG, 0 );
+        /* disable interrupt */
+        MWRITE_D32( ma, DAC_IER_REG, 0 );
 
-    /* turn off outputs using F401 watchdog mechanism */
-    MWRITE_D32( ma, DAC_SCLK_REG, 0 );
+        /* turn off outputs using F401 watchdog mechanism */
+        MWRITE_D32( ma, DAC_SCLK_REG, 0 );
+
+        llHdl->hwInit = 0;
+    }
 
     /*------------------------------+
     |  clean up memory               |
@@ -430,6 +433,7 @@ static int32 Z51_Write(
             MWRITE_D32( ma, DAC_IER_REG, DAC_IRQ_MASK );
         }
         llHdl->initDac = 0;
+        llHdl->hwInit = 1;
     }
 
     /* dependant on channel set output A, B or both */
